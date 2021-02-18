@@ -47,7 +47,7 @@ declare module BABYLON {
         /** Retrieve data object from the window state cache */
         static GetWindowState<T>(name: string): T;
         /** Post a safe message to top or local window */
-        static PostWindowMessage(message: any, targetOrigin: string, transfer?: Transferable[]): void;
+        static PostWindowMessage(msg: any, targetOrigin: string, transfer?: Transferable[]): void;
         private static SceneParsingEnabled;
         /** Enable scene loader parsing plugin */
         static EnableSceneParsing(enabled: boolean): void;

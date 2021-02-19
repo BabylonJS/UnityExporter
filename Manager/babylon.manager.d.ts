@@ -1201,6 +1201,12 @@ declare module BABYLON {
         a: number;
     }
     /**
+     * Asset Preloader Interface
+     */
+    interface IAssetPreloader {
+        getPreloadUrls(): string[];
+    }
+    /**
      * Trigger Volume State
      * @class TriggerVolume - All rights reserved (c) 2020 Mackey Kinard
      */

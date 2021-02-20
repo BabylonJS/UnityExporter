@@ -1,6 +1,6 @@
 declare module BABYLON {
     /**
-     * Babylon scene manager class
+     * Babylon scene manager class 
      * @class SceneManager - All rights reserved (c) 2020 Mackey Kinard
      */
     class SceneManager {

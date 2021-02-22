@@ -1201,10 +1201,10 @@ declare module BABYLON {
         a: number;
     }
     /**
-     * Asset Preloader Interface
+     * Asset Preloader Interface (https://doc.babylonjs.com/divingDeeper/importers/assetManager)
      */
     interface IAssetPreloader {
-        getPreloadUrls(): string[];
+        addPreloaderTasks(assetsManager: BABYLON.AssetsManager): void;
     }
     /**
      * Trigger Volume State

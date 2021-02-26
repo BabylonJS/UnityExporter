@@ -1632,8 +1632,6 @@ declare class CVTOOLS_unity_metadata implements BABYLON.GLTF2.IGLTFLoaderExtensi
     private _shaderList;
     private _preloadList;
     private _materialMap;
-    private _lightmapMap;
-    private _reflectionMap;
     private _assetsManager;
     private _activeMeshes;
     private _parseScene;
@@ -1657,9 +1655,7 @@ declare class CVTOOLS_unity_metadata implements BABYLON.GLTF2.IGLTFLoaderExtensi
     loadNodeAsync(context: string, node: BABYLON.GLTF2.INode, assign: (babylonMesh: BABYLON.TransformNode) => void): BABYLON.Nullable<Promise<BABYLON.TransformNode>>;
     /** @hidden */
     loadMaterialPropertiesAsync(context: string, material: BABYLON.GLTF2.IMaterial, babylonMaterial: BABYLON.Material): BABYLON.Nullable<Promise<void>>;
-    private _getCachedLightmapByIndex;
     private _getCachedMaterialByIndex;
-    private _getCachedCubemapByUrl;
     /** @hidden */
     createMaterial(context: string, material: BABYLON.GLTF2.IMaterial, babylonDrawMode: number): BABYLON.Nullable<BABYLON.Material>;
     /** @hidden */

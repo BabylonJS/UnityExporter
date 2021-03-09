@@ -620,6 +620,8 @@ declare module BABYLON {
         parseSceneComponents(entity: BABYLON.TransformNode): void;
         /** Post process pending scene components. Note: Internal use only */
         postProcessSceneComponents(preloadList: Array<BABYLON.ScriptComponent>): void;
+        /** Final process pending scene components. Note: Internal use only */
+        finalProcessSceneComponents(): void;
         private static DoParseSceneComponents;
         private static DoProcessPendingScripts;
         private static DoProcessPendingShadows;
@@ -1546,7 +1548,9 @@ declare module BABYLON {
         /** Get all loaded scene transform nodes. */
         static GetSceneTransforms(scene: BABYLON.Scene): BABYLON.TransformNode[];
         /** Parse scene component metadata. */
-        static ParseSceneComponents(scene: BABYLON.Scene, transforms: BABYLON.TransformNode[], preloadList: Array<BABYLON.ScriptComponent>): void;
+        static PostParseSceneComponents(scene: BABYLON.Scene, transforms: BABYLON.TransformNode[], preloadList: Array<BABYLON.ScriptComponent>): void;
+        /** Final parse scene component metadata. */
+        static FinalParseSceneComponents(scene: BABYLON.Scene): void;
         /**
          * Gets the specified asset container mesh.
          * @param container defines the asset container

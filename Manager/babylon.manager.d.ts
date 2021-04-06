@@ -10,6 +10,8 @@ declare module BABYLON {
         static get Copyright(): string;
         /** Set the allow user input flag */
         static EnableUserInput: boolean;
+        /** Enable the main page render loop */
+        static RenderLoopReady: boolean;
         /** Pauses the main page render loop */
         static PauseRenderLoop: boolean;
         /** Set the preload auto update progress flag */
@@ -1532,7 +1534,7 @@ declare module BABYLON {
         /** Private internal frame interpolation helper */
         private static InterpolateAnimation;
         /** Initialize default shader material properties */
-        static InitializeShaderMaterial(material: BABYLON.ShaderMaterial, binding?: boolean): void;
+        static InitializeShaderMaterial(material: BABYLON.ShaderMaterial, binding?: boolean, clipPlanes?: BABYLON.Nullable<boolean>): void;
         /** Transforms position from world space into screen space. */
         static WorldToScreenPoint(scene: BABYLON.Scene, position: BABYLON.Vector3, camera?: BABYLON.Camera): BABYLON.Vector3;
         /** Transforms a point from screen space into world space. */

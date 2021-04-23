@@ -35,7 +35,7 @@ declare module BABYLON {
         /** Loads a babylon scene file using the page loader window hooks (engine.html) */
         static LoadSceneFile(sceneFile: string, queryString?: string): void;
         /** Shows the top page scene loader (engine.html) */
-        static ShowParentLoader(show: boolean): void;
+        static ShowParentLoader(show: boolean, duration?: number): void;
         /** Get the system render quality setting. */
         static GetRenderQuality(): BABYLON.RenderQuality;
         /** Set the system render quality setting. */

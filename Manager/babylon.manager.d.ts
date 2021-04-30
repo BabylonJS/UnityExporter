@@ -804,7 +804,6 @@ declare module BABYLON {
         protected materialShaderChunks: BABYLON.UniversalAlbedoChunks;
         protected updateShaderChunks(): void;
         constructor(name: string, scene: Scene);
-        getClassName(): string;
         getShaderName(): string;
         getShaderChunk(): string;
         getShaderDefines(): BABYLON.PBRMaterialDefines;
@@ -828,6 +827,7 @@ declare module BABYLON {
         protected customShaderChunkResolve(): void;
         private _buildCustomShader;
         private _createShaderChunks;
+        private dumpEffect;
         private _attachAfterBind;
     }
     /**
@@ -836,7 +836,6 @@ declare module BABYLON {
      */
     class UniversalTerrainMaterial extends BABYLON.UniversalAlbedoMaterial {
         constructor(name: string, scene: BABYLON.Scene);
-        getClassName(): string;
         getShaderName(): string;
         getShaderChunk(): string;
         protected updateShaderChunks(): void;

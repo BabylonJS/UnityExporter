@@ -1396,8 +1396,18 @@ declare module BABYLON {
         static ValidateTransformRotation(transform: BABYLON.TransformNode): void;
         /** Validate and switch Euler rotation to Quaternion rotation. */
         static ValidateTransformQuaternion(transform: BABYLON.TransformNode): void;
-        /** Get the smoothed keyboard input value  */
+        /** Get the smoothed keyboard input value. */
         static GetKeyboardInputValue(scene: BABYLON.Scene, currentValue: number, targetValue: number): number;
+        /** Generate a randome number. */
+        static GenerateRandonNumber(min: number, max: number, decimals?: number): number;
+        /** Projects a vector onto another vector */
+        static ProjectVector(vector: BABYLON.Vector3, onnormal: BABYLON.Vector3): BABYLON.Vector3;
+        /** Projects a vector onto another vector and sets result */
+        static ProjectVectorToRef(vector: BABYLON.Vector3, onnormal: BABYLON.Vector3, result: BABYLON.Vector3): void;
+        /** Projects a vector onto a plane defined by a normal orthogonal to the plane */
+        static ProjectVectorOnPlane(vector: BABYLON.Vector3, planenormal: BABYLON.Vector3): BABYLON.Vector3;
+        /** Projects a vector onto a plane defined by a normal orthogonal to the plane and sets result */
+        static ProjectVectorOnPlaneToRef(vector: BABYLON.Vector3, planenormal: BABYLON.Vector3, result: BABYLON.Vector3): void;
         /** TODO */
         static DownloadEnvironment(cubemap: BABYLON.CubeTexture, success?: () => void, failure?: () => void): void;
         static HasOwnProperty(object: any, property: string): boolean;

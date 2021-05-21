@@ -36,10 +36,14 @@ declare module BABYLON {
         static LoadSceneFile(sceneFile: string, queryString?: string): void;
         /** Shows the top page scene loader (engine.html) */
         static ShowParentLoader(show: boolean, duration?: number): void;
-        /** Get the system render quality setting. */
+        /** Get the system render quality local storage setting. */
         static GetRenderQuality(): BABYLON.RenderQuality;
-        /** Set the system render quality setting. */
+        /** Set the system render quality local storage setting. */
         static SetRenderQuality(quality: BABYLON.RenderQuality): void;
+        /** Get the system virtual reality local storage setting. */
+        static GetVirtualRealityEnabled(): boolean;
+        /** Set the system virtual reality local storage setting. */
+        static SetVirtualRealityEnabled(enabled: boolean): void;
         /** Get an item from top window local storage. */
         static GetLocalStorageItem(key: string): string;
         /** Set an item to top window local storage. */
@@ -325,7 +329,7 @@ declare module BABYLON {
         private static NavigationMesh;
         private static CrowdInterface;
         private static PluginInstance;
-        /** Register handler that is triggered when the audio clip is ready */
+        /** Register handler that is triggered when the navigation mesh is ready */
         static OnNavMeshReadyObservable: Observable<Mesh>;
         /** Get recast total memory heap size */
         static GetRecastHeapSize(): number;

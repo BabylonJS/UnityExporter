@@ -11,4 +11,4 @@ Newtonsoft Json.NET
 Unity 2020.3 and greater now ship with Newtonsoft Json.NET.
 If your Unity project already includes Json.NET, you may get errors in the Unity Console due to
 duplicate function/class definitions. In most cases, removing the Babylon Toolkit copy of the of
-the Json folder (Assets/[Babylon]/Plugins/Json) should solve the issue.
+the Json folder (**Assets/[Babylon]/Plugins/Json**) should solve the issue.
